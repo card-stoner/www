@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -19,13 +20,13 @@ header {
 }
 
 
-.bagraund{
+.bagraund {
     width: 100%;
     height: 100%;
     padding-top: 20px;
 }
 
-.container-main{
+.container-main {
     max-width: 100%;
     padding: 0 20%;
 }
@@ -63,7 +64,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 
@@ -86,7 +87,7 @@ header {
     margin: 0;
 }
 
-.bagraund-video{
+.bagraund-video {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -113,7 +114,7 @@ header {
     gap: 20px;
 }
 
-.left-menu a,
+.left-menu>a,
 .right-menu a {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -131,7 +132,7 @@ header {
 }
 
 
-.top-category{
+.top-category {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +150,7 @@ header {
     text-decoration: none;
     margin-right: 10px;
     text-decoration: underline;
-    
+
 }
 
 .view-all-clothing {
@@ -158,26 +159,26 @@ header {
     text-decoration: none;
     margin-right: 10px;
     text-decoration: underline;
-    
+
 }
 
 
 .product-container-sneackers {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .product-container-clothing {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .product-card {
     background-color: white;
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: calc(25% - 20px);
     text-align: center;
     padding: 10px;
@@ -194,8 +195,8 @@ header {
 
 .product-card-clothing {
     background-color: white;
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: calc(25% - 20px);
     text-align: center;
     padding: 10px;
@@ -212,14 +213,14 @@ header {
 
 .product-image {
     width: 100%;
-    height: auto; 
+    height: auto;
     border-radius: 8px;
 }
 
 .product-title {
     margin-top: 10px;
     font-size: 18px;
-    color: #000000; 
+    color: #000000;
 }
 
 
@@ -230,17 +231,17 @@ header {
 .icon-like,
 .icon-cart {
     display: inline-block;
-    width: 24px;  
+    width: 24px;
     height: 24px;
     background-size: cover;
 }
 
 .icon-search {
-    background-image: url('src/head/search.svg'); 
+    background-image: url('src/head/search.svg');
 }
 
 .icon-user {
-    background-image: url('src/head/user.svg'); 
+    background-image: url('src/head/user.svg');
 }
 
 .icon-like {
@@ -255,7 +256,7 @@ main {
     flex: 1;
 }
 
-.container{
+.container {
     max-width: 100%;
     padding: 0 20%;
     background-color: #000000;
