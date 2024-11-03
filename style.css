@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -19,13 +20,13 @@ header {
 }
 
 
-.bagraund{
+.bagraund {
     width: 100%;
     height: 100%;
     padding-top: 20px;
 }
 
-.container-main{
+.container-main {
     max-width: 100%;
     padding: 0 20%;
 }
@@ -42,28 +43,40 @@ header {
     left: 0;
     width: 100%;
     z-index: 2;
+    
 }
 
 .dropdown-content {
     background-color: #ffffff;
     border-radius: 4px;
-    color: #000000;
-    display: none;
     position: absolute;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     min-width: 160px;
     z-index: 1;
     margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    overflow: hidden;
+    color: #000;
+    visibility: visible;
 }
 
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    color: #000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
 }
 
 .dropdown-content a:hover {
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 
@@ -86,7 +99,7 @@ header {
     margin: 0;
 }
 
-.bagraund-video{
+.bagraund-video {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -107,13 +120,20 @@ header {
     color: #333;
 }
 
+.category{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 .left-menu,
 .right-menu {
     display: flex;
     gap: 20px;
 }
 
-.left-menu a,
+.left-menu>a,
 .right-menu a {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -130,8 +150,7 @@ header {
     font-size: 20px;
 }
 
-
-.top-category{
+.top-category {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,41 +162,25 @@ header {
     color: #000000;
 }
 
-.view-all-sneakers {
+.view-all {
     font-size: 14px;
     color: #888;
     text-decoration: none;
     margin-right: 10px;
     text-decoration: underline;
-    
+
 }
 
-.view-all-clothing {
-    font-size: 14px;
-    color: #888;
-    text-decoration: none;
-    margin-right: 10px;
-    text-decoration: underline;
-    
-}
-
-
-.product-container-sneackers {
+.product-container {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-}
-
-.product-container-clothing {
-    display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .product-card {
     background-color: white;
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: calc(25% - 20px);
     text-align: center;
     padding: 10px;
@@ -192,34 +195,18 @@ header {
     transition: all 0.5s ease;
 }
 
-.product-card-clothing {
-    background-color: white;
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    width: calc(25% - 20px);
-    text-align: center;
-    padding: 10px;
-    margin-top: 40px;
-    opacity: 0.9;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.product-card-clothing:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    transition: all 0.5s ease;
-}
 
 .product-image {
     width: 100%;
-    height: auto; 
+    height: auto;
     border-radius: 8px;
 }
 
 .product-title {
     margin-top: 10px;
     font-size: 18px;
-    color: #000000; 
+    color: #000000;
 }
 
 
@@ -230,17 +217,17 @@ header {
 .icon-like,
 .icon-cart {
     display: inline-block;
-    width: 24px;  
+    width: 24px;
     height: 24px;
     background-size: cover;
 }
 
 .icon-search {
-    background-image: url('src/head/search.svg'); 
+    background-image: url('src/head/search.svg');
 }
 
 .icon-user {
-    background-image: url('src/head/user.svg'); 
+    background-image: url('src/head/user.svg');
 }
 
 .icon-like {
@@ -255,7 +242,7 @@ main {
     flex: 1;
 }
 
-.container{
+.container {
     max-width: 100%;
     padding: 0 20%;
     background-color: #000000;
@@ -391,6 +378,48 @@ main {
     padding-top: 10px;
     font-size: 16px;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Добавлено для позиционирования */
+    width: 100%; /* Установите ширину по необходимости */
+}
+
+.slider-track-wrapper {
+    overflow: hidden;
+    width: 100%; /* Установите ширину по необходимости */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card-item {
+    background-color: white;
+    border-radius: 8px;
+    width: calc(25% - 20px); /* Ширина карточек 25% */
+    text-align: center;
+    padding: 10px;
+    margin: 10px; /* Установите отступы */
+    opacity: 0.9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+}
+
 
 @media (max-width: 768px) {
 
