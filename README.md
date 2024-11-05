@@ -18,6 +18,8 @@
 - **script.js** — JavaScript file for interactive elements on the page.
 - **style.css** — CSS file for styling and positioning elements on the page.
 
+![S1LKROW Store Preview](S1LKROW.png)
+
 ## 🚀 Installation and Launch
 
 1. Clone the repository:
