@@ -392,10 +392,10 @@ body {
 .card-item {
     background-color: white;
     border-radius: 8px;
-    width: calc(25% - 20px); /* Ширина карточек 25% */
+    width: calc(25% - 20px);
     text-align: center;
     padding: 10px;
-    margin: 10px; /* Установите отступы */
+    margin: 10px;
     opacity: 0.9;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
